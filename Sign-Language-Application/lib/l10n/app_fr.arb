@@ -1,0 +1,130 @@
+{
+  "appTitle": "Reconnaissance de Signes",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "welcome": "Bienvenue",
+  "@welcome": {
+    "description": "Welcome text on welcome page"
+  },
+  "appDescription": "Cette application traduit la langue des signes en texte et voix",
+  "@appDescription": {
+    "description": "App description on welcome page"
+  },
+  "login": "Se connecter",
+  "@login": {
+    "description": "Login button text"
+  },
+  "register": "S'inscrire",
+  "@register": {
+    "description": "Register button text"
+  },
+  "email": "Email",
+  "@email": {
+    "description": "Email field label"
+  },
+  "password": "Mot de passe",
+  "@password": {
+    "description": "Password field label"
+  },
+  "name": "Nom complet",
+  "@name": {
+    "description": "Full name field label"
+  },
+  "rememberMe": "Se souvenir de moi",
+  "@rememberMe": {
+    "description": "Remember me checkbox text"
+  },
+  "forgotPassword": "Mot de passe oublié?",
+  "@forgotPassword": {
+    "description": "Forgot password link text"
+  },
+  "loginWith": "Ou connectez-vous avec",
+  "@loginWith": {
+    "description": "Login with text"
+  },
+  "noAccount": "Pas encore de compte?",
+  "@noAccount": {
+    "description": "No account text"
+  },
+  "haveAccount": "Vous avez déjà un compte?",
+  "@haveAccount": {
+    "description": "Have account text"
+  },
+  "createAccount": "Créer un compte",
+  "@createAccount": {
+    "description": "Create account button text"
+  },
+  "registerWith": "S'inscrire avec",
+  "@registerWith": {
+    "description": "Register with text"
+  },
+  "acceptTerms": "J'accepte le traitement des données personnelles",
+  "@acceptTerms": {
+    "description": "Accept terms text"
+  },
+  "personalData": "données personnelles",
+  "@personalData": {
+    "description": "Personal data text"
+  },
+  "iAccept": "J'accepte le traitement des",
+  "@iAccept": {
+    "description": "I accept text"
+  },
+  "pleaseAcceptTerms": "Veuillez accepter le traitement des données personnelles",
+  "@pleaseAcceptTerms": {
+    "description": "Please accept terms error message"
+  },
+  "pleaseEnterEmail": "Veuillez entrer votre email",
+  "@pleaseEnterEmail": {
+    "description": "Please enter email validation message"
+  },
+  "pleaseEnterPassword": "Veuillez entrer votre mot de passe",
+  "@pleaseEnterPassword": {
+    "description": "Please enter password validation message"
+  },
+  "pleaseEnterName": "Veuillez entrer votre nom complet",
+  "@pleaseEnterName": {
+    "description": "Please enter name validation message"
+  },
+  "emailExample": "Ex : marie.dupont@example.com",
+  "@emailExample": {
+    "description": "Email field example"
+  },
+  "passwordExample": "Ex : ••••••••",
+  "@passwordExample": {
+    "description": "Password field example"
+  },
+  "nameExample": "Ex : Marie Dupont",
+  "@nameExample": {
+    "description": "Name field example"
+  },
+  "signRecognition": "Reconnaissance de Signes",
+  "@signRecognition": {
+    "description": "Sign recognition title"
+  },
+  "activateCamera": "Activer la caméra",
+  "@activateCamera": {
+    "description": "Activate camera button text"
+  },
+  "noCameraDetected": "Aucun appareil photo détecté",
+  "@noCameraDetected": {
+    "description": "No camera detected text"
+  },
+  "readText": "Lire le texte",
+  "@readText": {
+    "description": "Read text button"
+  },
+  "changeLanguage": "Changer de langue",
+  "@changeLanguage": {
+    "description": "Change language button text"
+  },
+  "arabic": "Arabe",
+  "@arabic": {
+    "description": "Arabic language option"
+  },
+  "french": "Français",
+  "@french": {
+    "description": "French language option"
+  }
+}

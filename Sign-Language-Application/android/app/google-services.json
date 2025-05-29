@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "580078063282",
+    "project_id": "signlanguageapp-37c45",
+    "storage_bucket": "signlanguageapp-37c45.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580078063282:android:9f9704a1da6afe51cf43ab",
+        "android_client_info": {
+          "package_name": "com.example.signrecognizer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-jhWLTpNG4kfCYm20ixLp0p5tiOgYDk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,130 @@
+{
+  "appTitle": "التعرف على لغة الإشارة",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "welcome": "مرحبا",
+  "@welcome": {
+    "description": "Welcome text on welcome page"
+  },
+  "appDescription": "يترجم هذا التطبيق لغة الإشارة إلى نص وصوت",
+  "@appDescription": {
+    "description": "App description on welcome page"
+  },
+  "login": "تسجيل الدخول",
+  "@login": {
+    "description": "Login button text"
+  },
+  "register": "إنشاء حساب",
+  "@register": {
+    "description": "Register button text"
+  },
+  "email": "البريد الإلكتروني",
+  "@email": {
+    "description": "Email field label"
+  },
+  "password": "كلمة المرور",
+  "@password": {
+    "description": "Password field label"
+  },
+  "name": "الاسم الكامل",
+  "@name": {
+    "description": "Full name field label"
+  },
+  "rememberMe": "تذكرني",
+  "@rememberMe": {
+    "description": "Remember me checkbox text"
+  },
+  "forgotPassword": "نسيت كلمة المرور؟",
+  "@forgotPassword": {
+    "description": "Forgot password link text"
+  },
+  "loginWith": "أو سجل الدخول باستخدام",
+  "@loginWith": {
+    "description": "Login with text"
+  },
+  "noAccount": "ليس لديك حساب؟",
+  "@noAccount": {
+    "description": "No account text"
+  },
+  "haveAccount": "لديك حساب بالفعل؟",
+  "@haveAccount": {
+    "description": "Have account text"
+  },
+  "createAccount": "إنشاء حساب",
+  "@createAccount": {
+    "description": "Create account button text"
+  },
+  "registerWith": "أو سجل باستخدام",
+  "@registerWith": {
+    "description": "Register with text"
+  },
+  "acceptTerms": "أوافق على معالجة البيانات الشخصية",
+  "@acceptTerms": {
+    "description": "Accept terms text"
+  },
+  "personalData": "البيانات الشخصية",
+  "@personalData": {
+    "description": "Personal data text"
+  },
+  "iAccept": "أوافق على معالجة",
+  "@iAccept": {
+    "description": "I accept text"
+  },
+  "pleaseAcceptTerms": "يرجى الموافقة على معالجة البيانات الشخصية",
+  "@pleaseAcceptTerms": {
+    "description": "Please accept terms error message"
+  },
+  "pleaseEnterEmail": "يرجى إدخال البريد الإلكتروني",
+  "@pleaseEnterEmail": {
+    "description": "Please enter email validation message"
+  },
+  "pleaseEnterPassword": "يرجى إدخال كلمة المرور",
+  "@pleaseEnterPassword": {
+    "description": "Please enter password validation message"
+  },
+  "pleaseEnterName": "يرجى إدخال اسمك الكامل",
+  "@pleaseEnterName": {
+    "description": "Please enter name validation message"
+  },
+  "emailExample": "مثال: marie.dupont@example.com",
+  "@emailExample": {
+    "description": "Email field example"
+  },
+  "passwordExample": "مثال: ••••••••",
+  "@passwordExample": {
+    "description": "Password field example"
+  },
+  "nameExample": "مثال: محمد أحمد",
+  "@nameExample": {
+    "description": "Name field example"
+  },
+  "signRecognition": "التعرف على لغة الإشارة",
+  "@signRecognition": {
+    "description": "Sign recognition title"
+  },
+  "activateCamera": "تفعيل الكاميرا",
+  "@activateCamera": {
+    "description": "Activate camera button text"
+  },
+  "noCameraDetected": "لم يتم الكشف عن كاميرا",
+  "@noCameraDetected": {
+    "description": "No camera detected text"
+  },
+  "readText": "قراءة النص",
+  "@readText": {
+    "description": "Read text button"
+  },
+  "changeLanguage": "تغيير اللغة",
+  "@changeLanguage": {
+    "description": "Change language button text"
+  },
+  "arabic": "العربية",
+  "@arabic": {
+    "description": "Arabic language option"
+  },
+  "french": "الفرنسية",
+  "@french": {
+    "description": "French language option"
+  }
+}
