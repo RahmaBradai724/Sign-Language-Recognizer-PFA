@@ -166,31 +166,8 @@ class _RegisterPageState extends State<RegisterPage> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 25.0),
-                        Row(
-                          children: [
-                            Checkbox(
-                              value: agreePersonalData,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  agreePersonalData = value!;
-                                });
-                              },
-                              activeColor: primaryColor,
-                            ),
-                            Text(
-                              AppLocalizations.of(context)!.iAccept,
-                              style: const TextStyle(color: Colors.black45),
-                            ),
-                            Text(
-                              AppLocalizations.of(context)!.personalData,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: primaryColor,
-                              ),
-                            ),
-                          ],
-                        ),
+
+
                         const SizedBox(height: 25.0),
                         SizedBox(
                           width: double.infinity,
@@ -235,8 +212,10 @@ class _RegisterPageState extends State<RegisterPage> {
                         const SizedBox(height: 30.0),
 
                         // ✅ CORRECT social icons
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        Wrap(
+                          alignment: WrapAlignment.center,
+                          spacing: 20,
+                          runSpacing: 10,
                           children: [
                             Brand(Brands.facebook, size: 30),
                             Brand(Brands.twitter, size: 30),
@@ -244,7 +223,6 @@ class _RegisterPageState extends State<RegisterPage> {
                             Brand(Brands.apple_logo, size: 30),
                           ],
                         ),
-
                         const SizedBox(height: 25.0),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,

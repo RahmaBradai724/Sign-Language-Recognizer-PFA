@@ -15,18 +15,31 @@ class _StaticHomePageState extends State<StaticHomePage> {
   Future<void>? _initializeControllerFuture;
   final String mockTranslatedText = "Bonjour, comment ça va ?";
   bool isCameraInitialized = false;
+  int _selectedCameraIndex = 0;
 
   Future<void> initializeCamera() async {
     if (widget.cameras.isEmpty) return;
+
+    final camera = widget.cameras[_selectedCameraIndex];
+
     _cameraController = CameraController(
-      widget.cameras.first,
+      camera,
       ResolutionPreset.medium,
       enableAudio: false,
     );
+
     _initializeControllerFuture = _cameraController!.initialize();
     setState(() {
       isCameraInitialized = true;
     });
+  }
+
+  void switchCamera() async {
+    if (widget.cameras.length < 2) return;
+
+    _selectedCameraIndex = (_selectedCameraIndex + 1) % widget.cameras.length;
+    await _cameraController?.dispose();
+    initializeCamera();
   }
 
   @override
@@ -71,9 +84,14 @@ class _StaticHomePageState extends State<StaticHomePage> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      IconButton(
-                        icon: const Icon(Icons.settings, color: Colors.white),
-                        onPressed: () {},
+                      Row(
+                        children: [
+                          IconButton(
+                            icon: const Icon(Icons.switch_camera, color: Colors.white),
+                            onPressed: switchCamera,
+                          ),
+
+                        ],
                       ),
                     ],
                   ),
