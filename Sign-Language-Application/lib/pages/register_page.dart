@@ -28,14 +28,15 @@ class _RegisterPageState extends State<RegisterPage> {
   Future<void> _register() async {
     try {
       if (_formSignupKey.currentState!.validate() && agreePersonalData) {
-        UserCredential userCredential = await _auth.createUserWithEmailAndPassword(
+        await _auth.createUserWithEmailAndPassword(
           email: _emailController.text,
           password: _passwordController.text,
         );
-        // Redirect to HomePage after successful registration
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => StaticHomePage(cameras: widget.cameras)),
+          MaterialPageRoute(
+            builder: (context) => StaticHomePage(cameras: widget.cameras),
+          ),
         );
       } else if (!agreePersonalData) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -232,15 +233,18 @@ class _RegisterPageState extends State<RegisterPage> {
                           ],
                         ),
                         const SizedBox(height: 30.0),
+
+                        // ✅ CORRECT social icons
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Logo(Logos.facebook_f),
-                            Logo(Logos.twitter),
-                            Logo(Logos.google),
-                            Logo(Logos.apple),
+                            Brand(Brands.facebook, size: 30),
+                            Brand(Brands.twitter, size: 30),
+                            Brand(Brands.google, size: 30),
+                            Brand(Brands.apple_logo, size: 30),
                           ],
                         ),
+
                         const SizedBox(height: 25.0),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -253,7 +257,9 @@ class _RegisterPageState extends State<RegisterPage> {
                               onTap: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (e) => LoginPage(cameras: widget.cameras)),
+                                  MaterialPageRoute(
+                                    builder: (e) => LoginPage(cameras: widget.cameras),
+                                  ),
                                 );
                               },
                               child: Text(

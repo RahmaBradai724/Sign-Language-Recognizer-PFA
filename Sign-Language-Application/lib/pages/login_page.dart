@@ -216,10 +216,10 @@ class _LoginPageState extends State<LoginPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Logo(Logos.facebook_f),
-                            Logo(Logos.twitter),
-                            Logo(Logos.google),
-                            Logo(Logos.apple),
+                            Brand(Brands.facebook, size: 30),
+                            Brand(Brands.twitter, size: 30),
+                            Brand(Brands.google, size: 30),
+                            Brand(Brands.apple_logo, size: 30),
                           ],
                         ),
                         const SizedBox(height: 25.0),
