@@ -1,8 +1,9 @@
 import 'dart:io';
-import 'package:video_thumbnail/video_thumbnail.dart';
+import 'package:video_compress/video_compress.dart';
 import 'package:video_player/video_player.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as path;
+import 'package:image/image.dart' as img;
 
 class VideoFrameExtractor {
   static const int TARGET_FRAMES = 16;
@@ -37,9 +38,10 @@ class VideoFrameExtractor {
       );
       print('✅ Extraction terminée: ${validFrames.length} frames en ${stopwatch.elapsedMilliseconds}ms');
       return result;
-    } catch (e) {
+    } catch (e, stackTrace) {
       stopwatch.stop();
       print('❌ Erreur extraction: $e');
+      print('StackTrace: $stackTrace');
       return FrameExtractionResult(
         framePaths: [],
         extractionTimeMs: stopwatch.elapsedMilliseconds,
@@ -109,28 +111,40 @@ class VideoFrameExtractor {
       try {
         final timestamp = timestamps[i];
         final framePath = path.join(outputDir, 'frame_${i.toString().padLeft(3, '0')}.jpg');
-        print('🖼️ Extraction frame $i à ${timestamp.toStringAsFixed(2)}s');
+        print('🖼️ Extraction frame $i à ${timestamp.toStringAsFixed(2)}s, path: $framePath');
 
-        final result = await VideoThumbnail.thumbnailFile(
-          video: videoPath,
-          thumbnailPath: framePath,
-          imageFormat: ImageFormat.JPEG,
-          timeMs: (timestamp * 1000).round(),
-          maxWidth: FRAME_SIZE,
-          maxHeight: FRAME_SIZE,
+        // Extract thumbnail using video_compress
+        final thumbnail = await VideoCompress.getFileThumbnail(
+          videoPath,
           quality: QUALITY,
+          position: (timestamp * 1000).toInt(), // Convert seconds to milliseconds
         );
 
-        if (result != null && File(result).existsSync()) {
-          framePaths.add(result);
-          print('✅ Frame $i extraite: ${path.basename(result)}');
+        // Resize to 112x112
+        final image = img.decodeImage(await thumbnail.readAsBytes());
+        if (image != null) {
+          final resized = img.copyResize(image, width: FRAME_SIZE, height: FRAME_SIZE);
+          final resizedFile = File(framePath);
+          await resizedFile.writeAsBytes(img.encodeJpg(resized, quality: QUALITY));
+
+          if (resizedFile.existsSync()) {
+            framePaths.add(framePath);
+            print('✅ Frame $i extraite: ${path.basename(framePath)}');
+          } else {
+            print('⚠️ Échec sauvegarde frame $i: fichier non créé');
+          }
         } else {
-          print('⚠️ Échec frame $i');
+          print('⚠️ Échec décodage frame $i: image nulle');
         }
 
+        // Clean up temporary thumbnail
+        await thumbnail.delete();
+
+        // Throttle to reduce main-thread load
         await Future.delayed(Duration(milliseconds: 50));
-      } catch (e) {
+      } catch (e, stackTrace) {
         print('❌ Erreur frame $i: $e');
+        print('StackTrace: $stackTrace');
       }
     }
     return framePaths;
@@ -209,7 +223,7 @@ class FrameExtractionResult {
   });
 
   int get frameCount => framePaths.length;
-  double get framesPerSecond => frameCount / originalDuration;
+  double get framesPerSecond => originalDuration > 0 ? frameCount / originalDuration : 0;
 }
 
 class VideoInfo {

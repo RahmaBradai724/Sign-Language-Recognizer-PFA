@@ -19,9 +19,9 @@ class VideoSignLanguageRecognizer {
     try {
       print('📥 Chargement du modèle...');
       final options = InterpreterOptions();
-     /* if (Platform.isAndroid) {
+      /* if (Platform.isAndroid) {
         options.addDelegate(XNNPackDelegate());
-      }*/
+      } */
       _interpreter = await Interpreter.fromAsset(MODEL_PATH, options: options);
       print('📄 Modèle .tflite chargé avec succès');
 
@@ -65,18 +65,35 @@ class VideoSignLanguageRecognizer {
       print('📸 ${extractionResult.frameCount} frames extraites en ${extractionResult.extractionTimeMs}ms');
 
       final preprocessStopwatch = Stopwatch()..start();
-      final input = await _preprocessVideoSequence(extractionResult.framePaths);
+      final framePredictions = <List<double>>[];
+
+      // Process each frame individually
+      for (final framePath in extractionResult.framePaths) {
+        final frameData = await _preprocessFrame(framePath);
+        // Allocate output tensor with shape [1, num_classes]
+        final output = List.generate(1, (_) => List.filled(_labels!.length, 0.0));
+        _interpreter!.run(frameData, output);
+        framePredictions.add(output[0]);
+      }
+
       preprocessStopwatch.stop();
       print('🔧 Preprocessing terminé en ${preprocessStopwatch.elapsedMilliseconds}ms');
 
+      // Aggregate predictions (e.g., average them)
       final inferenceStopwatch = Stopwatch()..start();
-      final output = List.filled(_labels!.length, 0.0).reshape([1, _labels!.length]);
-      _interpreter!.run(input, output);
+      final aggregatedOutput = <double>[];
+      for (int i = 0; i < _labels!.length; i++) {
+        double sum = 0;
+        for (final prediction in framePredictions) {
+          sum += prediction[i];
+        }
+        aggregatedOutput.add(sum / framePredictions.length);
+      }
       inferenceStopwatch.stop();
       print('🧠 Inférence terminée en ${inferenceStopwatch.elapsedMilliseconds}ms');
 
       final result = _createResult(
-        output[0],
+        aggregatedOutput,
         extractionResult,
         preprocessStopwatch.elapsedMilliseconds,
         inferenceStopwatch.elapsedMilliseconds,
@@ -95,17 +112,7 @@ class VideoSignLanguageRecognizer {
     }
   }
 
-  Future<List<List<List<List<List<double>>>>>> _preprocessVideoSequence(List<String> framePaths) async {
-    final sequence = <List<List<List<double>>>>[];
-    for (int i = 0; i < 16; i++) {
-      final framePath = i < framePaths.length ? framePaths[i] : framePaths.last;
-      final frameData = await _preprocessFrame(framePath);
-      sequence.add(frameData);
-    }
-    return [sequence];
-  }
-
-  Future<List<List<List<double>>>> _preprocessFrame(String framePath) async {
+  Future<List<List<List<List<double>>>>> _preprocessFrame(String framePath) async {
     final imageFile = File(framePath);
     final bytes = await imageFile.readAsBytes();
     img.Image? image = img.decodeImage(bytes);
@@ -118,15 +125,15 @@ class VideoSignLanguageRecognizer {
       image = img.copyResize(image, width: 112, height: 112);
     }
 
-    return List.generate(112, (y) =>
-        List.generate(112, (x) {
-          final pixel = image!.getPixel(x, y);
-          final r = pixel.r / 255.0;
-          final g = pixel.g / 255.0;
-          final b = pixel.b / 255.0;
-          return [r, g, b];
-        })
-    );
+    // Create a 4D tensor: [1, 112, 112, 3]
+    final input = [
+      List.generate(112, (y) => List.generate(112, (x) {
+        final pixel = image!.getPixel(x, y);
+        return [pixel.r / 255.0, pixel.g / 255.0, pixel.b / 255.0];
+      }))
+    ];
+
+    return input;
   }
 
   VideoRecognitionResult _createResult(
