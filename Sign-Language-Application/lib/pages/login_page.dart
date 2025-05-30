@@ -5,6 +5,7 @@ import 'package:icons_plus/icons_plus.dart';
 import 'package:signrecognizer/l10n/app_localizations.dart';
 import 'package:signrecognizer/pages/home_page.dart';
 import 'package:signrecognizer/pages/register_page.dart';
+import 'package:signrecognizer/pages/sign_recognition_page.dart';
 
 class LoginPage extends StatefulWidget {
   final List<CameraDescription> cameras;
@@ -36,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
         Navigator.of(context).pushReplacement(
           PageRouteBuilder(
             transitionDuration: const Duration(milliseconds: 500),
-            pageBuilder: (context, animation, secondaryAnimation) => StaticHomePage(cameras: widget.cameras),
+            pageBuilder: (context, animation, secondaryAnimation) => SignRecognitionScreen (cameras: widget.cameras),
             transitionsBuilder: (context, animation, secondaryAnimation, child) {
               return FadeTransition(
                 opacity: animation,

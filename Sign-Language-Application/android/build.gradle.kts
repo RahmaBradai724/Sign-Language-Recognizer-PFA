@@ -14,6 +14,11 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+
+        // Ce dépôt est le bon pour les artefacts FFmpeg
+        maven {
+            url = uri("https://maven.arthenica.com")
+        }
     }
 }
 

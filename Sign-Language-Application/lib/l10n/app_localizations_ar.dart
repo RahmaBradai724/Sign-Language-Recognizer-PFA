@@ -9,13 +9,13 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get appTitle => 'التعرف على لغة الإشارة';
+  String get appTitle => 'التعرف على الإشارات';
 
   @override
   String get welcome => 'مرحبا';
 
   @override
-  String get appDescription => 'يترجم هذا التطبيق لغة الإشارة إلى نص وصوت';
+  String get appDescription => 'هذا التطبيق يترجم لغة الإشارة إلى نص وصوت';
 
   @override
   String get login => 'تسجيل الدخول';
@@ -84,7 +84,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get nameExample => 'مثال: محمد أحمد';
 
   @override
-  String get signRecognition => 'التعرف على لغة الإشارة';
+  String get signRecognition => 'التعرف على الإشارات';
 
   @override
   String get activateCamera => 'تفعيل الكاميرا';
@@ -103,4 +103,96 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get french => 'الفرنسية';
+
+  @override
+  String get instructions => 'التعليمات';
+
+  @override
+  String get bestRecognition => 'للحصول على أفضل تعرف:';
+
+  @override
+  String get recordVideoLength => 'سجل فيديوهات مدتها من 3 إلى 5 ثوانٍ';
+
+  @override
+  String get keepHandsVisible => 'حافظ على وضوح يديك';
+
+  @override
+  String get uniformLighting => 'استخدم إضاءة متساوية وكافية';
+
+  @override
+  String get avoidSuddenMovements => 'تجنب الحركات المفاجئة';
+
+  @override
+  String get centerSign => 'قم بتمركز الإشارة على الشاشة';
+
+  @override
+  String get modelAnalysisInfo =>
+      'يقوم النموذج بتحليل 16 إطارًا من الفيديو الخاص بك لفهم حركة الإشارة.';
+
+  @override
+  String get understood => 'مفهوم';
+
+  @override
+  String get stop => 'إيقاف';
+
+  @override
+  String get record => 'تسجيل';
+
+  @override
+  String get select => 'اختيار';
+
+  @override
+  String get analyze => 'تحليل';
+
+  @override
+  String get recordOrSelectVideo =>
+      'سجل فيديو مدته 3-5 ثوانٍ أو اختر ملف فيديو';
+
+  @override
+  String get recognizedSign => 'الإشارة المعترف بها (تسلسل)';
+
+  @override
+  String get confidence => 'الثقة';
+
+  @override
+  String get frames => 'إطارات';
+
+  @override
+  String get otherPossibilities => 'احتمالات أخرى';
+
+  @override
+  String get inferenceTime => 'زمن الاستدلال';
+
+  @override
+  String get sequence => 'تسلسل';
+
+  @override
+  String get loadingModelOrAnalyzing => 'جارٍ تحميل النموذج أو التحليل...';
+
+  @override
+  String get modelLoadError => 'خطأ في تحميل النموذج';
+
+  @override
+  String get cameraError => 'فشل تهيئة الكاميرا';
+
+  @override
+  String get recordingError => 'خطأ في بدء التسجيل';
+
+  @override
+  String get recordingStopError => 'خطأ في إيقاف التسجيل';
+
+  @override
+  String get filePickError => 'خطأ في اختيار الملف';
+
+  @override
+  String get videoLoadError => 'خطأ في تحميل الفيديو';
+
+  @override
+  String get noVideoSelected => 'لم يتم اختيار فيديو';
+
+  @override
+  String get analysisError => 'فشل تحليل الفيديو';
+
+  @override
+  String get retry => 'إعادة المحاولة';
 }

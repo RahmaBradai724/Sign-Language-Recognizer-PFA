@@ -86,7 +86,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get nameExample => 'Ex : Marie Dupont';
 
   @override
-  String get signRecognition => 'Reconnaissance de Signes';
+  String get signRecognition => 'Reconnaissance des Signes';
 
   @override
   String get activateCamera => 'Activer la caméra';
@@ -105,4 +105,97 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get french => 'Français';
+
+  @override
+  String get instructions => 'Instructions';
+
+  @override
+  String get bestRecognition => 'Pour une meilleure reconnaissance :';
+
+  @override
+  String get recordVideoLength => 'Enregistrez des vidéos de 3 à 5 secondes';
+
+  @override
+  String get keepHandsVisible => 'Gardez vos mains bien visibles';
+
+  @override
+  String get uniformLighting => 'Utilisez un éclairage uniforme et suffisant';
+
+  @override
+  String get avoidSuddenMovements => 'Évitez les mouvements brusques';
+
+  @override
+  String get centerSign => 'Centrez le signe à l\'écran';
+
+  @override
+  String get modelAnalysisInfo =>
+      'Le modèle analyse 16 images de votre vidéo pour comprendre le mouvement du signe.';
+
+  @override
+  String get understood => 'Compris';
+
+  @override
+  String get stop => 'Arrêter';
+
+  @override
+  String get record => 'Enregistrer';
+
+  @override
+  String get select => 'Sélectionner';
+
+  @override
+  String get analyze => 'Analyser';
+
+  @override
+  String get recordOrSelectVideo =>
+      'Enregistrez une vidéo de 3 à 5 secondes ou sélectionnez un fichier vidéo';
+
+  @override
+  String get recognizedSign => 'Signe reconnu (séquence)';
+
+  @override
+  String get confidence => 'Confiance';
+
+  @override
+  String get frames => 'Images';
+
+  @override
+  String get otherPossibilities => 'Autres possibilités';
+
+  @override
+  String get inferenceTime => 'Temps d\'inférence';
+
+  @override
+  String get sequence => 'Séquence';
+
+  @override
+  String get loadingModelOrAnalyzing =>
+      'Chargement du modèle ou analyse en cours...';
+
+  @override
+  String get modelLoadError => 'Erreur de chargement du modèle';
+
+  @override
+  String get cameraError => 'Échec de l\'initialisation de la caméra';
+
+  @override
+  String get recordingError => 'Erreur au démarrage de l\'enregistrement';
+
+  @override
+  String get recordingStopError => 'Erreur à l\'arrêt de l\'enregistrement';
+
+  @override
+  String get filePickError => 'Erreur lors de la sélection du fichier';
+
+  @override
+  String get videoLoadError => 'Erreur lors du chargement de la vidéo';
+
+  @override
+  String get noVideoSelected => 'Aucune vidéo sélectionnée';
+
+  @override
+  String get analysisError => 'Échec de l\'analyse de la vidéo';
+
+  @override
+  String get retry => 'Réessayer';
 }

@@ -99,7 +99,7 @@
   "@nameExample": {
     "description": "Name field example"
   },
-  "signRecognition": "Reconnaissance de Signes",
+  "signRecognition": "Reconnaissance des Signes",
   "@signRecognition": {
     "description": "Sign recognition title"
   },
@@ -126,5 +126,125 @@
   "french": "Français",
   "@french": {
     "description": "French language option"
+  },
+  "instructions": "Instructions",
+  "@instructions": {
+    "description": "Instructions for sign recognition"
+  },
+  "bestRecognition": "Pour une meilleure reconnaissance :",
+  "@bestRecognition": {
+    "description": "Best recognition tips title"
+  },
+  "recordVideoLength": "Enregistrez des vidéos de 3 à 5 secondes",
+  "@recordVideoLength": {
+    "description": "Record video length instruction"
+  },
+  "keepHandsVisible": "Gardez vos mains bien visibles",
+  "@keepHandsVisible": {
+    "description": "Keep hands visible instruction"
+  },
+  "uniformLighting": "Utilisez un éclairage uniforme et suffisant",
+  "@uniformLighting": {
+    "description": "Uniform lighting instruction"
+  },
+  "avoidSuddenMovements": "Évitez les mouvements brusques",
+  "@avoidSuddenMovements": {
+    "description": "Avoid sudden movements instruction"
+  },
+  "centerSign": "Centrez le signe à l'écran",
+  "@centerSign": {
+    "description": "Center sign instruction"
+  },
+  "modelAnalysisInfo": "Le modèle analyse 16 images de votre vidéo pour comprendre le mouvement du signe.",
+  "@modelAnalysisInfo": {
+    "description": "Model analysis information"
+  },
+  "understood": "Compris",
+  "@understood": {
+    "description": "Understood button text"
+  },
+  "stop": "Arrêter",
+  "@stop": {
+    "description": "Stop recording button text"
+  },
+  "record": "Enregistrer",
+  "@record": {
+    "description": "Record button text"
+  },
+  "select": "Sélectionner",
+  "@select": {
+    "description": "Select video button text"
+  },
+  "analyze": "Analyser",
+  "@analyze": {
+    "description": "Analyze video button text"
+  },
+  "recordOrSelectVideo": "Enregistrez une vidéo de 3 à 5 secondes ou sélectionnez un fichier vidéo",
+  "@recordOrSelectVideo": {
+    "description": "Record or select video instruction"
+  },
+  "recognizedSign": "Signe reconnu (séquence)",
+  "@recognizedSign": {
+    "description": "Recognized sign label"
+  },
+  "confidence": "Confiance",
+  "@confidence": {
+    "description": "Confidence label"
+  },
+  "frames": "Images",
+  "@frames": {
+    "description": "Frames label"
+  },
+  "otherPossibilities": "Autres possibilités",
+  "@otherPossibilities": {
+    "description": "Other possibilities label"
+  },
+  "inferenceTime": "Temps d'inférence",
+  "@inferenceTime": {
+    "description": "Inference time label"
+  },
+  "sequence": "Séquence",
+  "@sequence": {
+    "description": "Sequence label"
+  },
+  "loadingModelOrAnalyzing": "Chargement du modèle ou analyse en cours...",
+  "@loadingModelOrAnalyzing": {
+    "description": "Loading model or analyzing text"
+  },
+  "modelLoadError": "Erreur de chargement du modèle",
+  "@modelLoadError": {
+    "description": "Error message for model loading failure"
+  },
+  "cameraError": "Échec de l'initialisation de la caméra",
+  "@cameraError": {
+    "description": "Error message for camera initialization failure"
+  },
+  "recordingError": "Erreur au démarrage de l'enregistrement",
+  "@recordingError": {
+    "description": "Error message for starting recording failure"
+  },
+  "recordingStopError": "Erreur à l'arrêt de l'enregistrement",
+  "@recordingStopError": {
+    "description": "Error message for stopping recording failure"
+  },
+  "filePickError": "Erreur lors de la sélection du fichier",
+  "@filePickError": {
+    "description": "Error message for file selection failure"
+  },
+  "videoLoadError": "Erreur lors du chargement de la vidéo",
+  "@videoLoadError": {
+    "description": "Error message for video loading failure"
+  },
+  "noVideoSelected": "Aucune vidéo sélectionnée",
+  "@noVideoSelected": {
+    "description": "Error message for no video selected"
+  },
+  "analysisError": "Échec de l'analyse de la vidéo",
+  "@analysisError": {
+    "description": "Error message for video analysis failure"
+  },
+  "retry": "Réessayer",
+  "@retry": {
+    "description": "Retry button text"
   }
 }

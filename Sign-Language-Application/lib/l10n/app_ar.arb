@@ -1,5 +1,5 @@
 {
-  "appTitle": "التعرف على لغة الإشارة",
+  "appTitle": "التعرف على الإشارات",
   "@appTitle": {
     "description": "The title of the application"
   },
@@ -7,7 +7,7 @@
   "@welcome": {
     "description": "Welcome text on welcome page"
   },
-  "appDescription": "يترجم هذا التطبيق لغة الإشارة إلى نص وصوت",
+  "appDescription": "هذا التطبيق يترجم لغة الإشارة إلى نص وصوت",
   "@appDescription": {
     "description": "App description on welcome page"
   },
@@ -99,7 +99,7 @@
   "@nameExample": {
     "description": "Name field example"
   },
-  "signRecognition": "التعرف على لغة الإشارة",
+  "signRecognition": "التعرف على الإشارات",
   "@signRecognition": {
     "description": "Sign recognition title"
   },
@@ -126,5 +126,125 @@
   "french": "الفرنسية",
   "@french": {
     "description": "French language option"
+  },
+  "instructions": "التعليمات",
+  "@instructions": {
+    "description": "Instructions for sign recognition"
+  },
+  "bestRecognition": "للحصول على أفضل تعرف:",
+  "@bestRecognition": {
+    "description": "Best recognition tips title"
+  },
+  "recordVideoLength": "سجل فيديوهات مدتها من 3 إلى 5 ثوانٍ",
+  "@recordVideoLength": {
+    "description": "Record video length instruction"
+  },
+  "keepHandsVisible": "حافظ على وضوح يديك",
+  "@keepHandsVisible": {
+    "description": "Keep hands visible instruction"
+  },
+  "uniformLighting": "استخدم إضاءة متساوية وكافية",
+  "@uniformLighting": {
+    "description": "Uniform lighting instruction"
+  },
+  "avoidSuddenMovements": "تجنب الحركات المفاجئة",
+  "@avoidSuddenMovements": {
+    "description": "Avoid sudden movements instruction"
+  },
+  "centerSign": "قم بتمركز الإشارة على الشاشة",
+  "@centerSign": {
+    "description": "Center sign instruction"
+  },
+  "modelAnalysisInfo": "يقوم النموذج بتحليل 16 إطارًا من الفيديو الخاص بك لفهم حركة الإشارة.",
+  "@modelAnalysisInfo": {
+    "description": "Model analysis information"
+  },
+  "understood": "مفهوم",
+  "@understood": {
+    "description": "Understood button text"
+  },
+  "stop": "إيقاف",
+  "@stop": {
+    "description": "Stop recording button text"
+  },
+  "record": "تسجيل",
+  "@record": {
+    "description": "Record button text"
+  },
+  "select": "اختيار",
+  "@select": {
+    "description": "Select video button text"
+  },
+  "analyze": "تحليل",
+  "@analyze": {
+    "description": "Analyze video button text"
+  },
+  "recordOrSelectVideo": "سجل فيديو مدته 3-5 ثوانٍ أو اختر ملف فيديو",
+  "@recordOrSelectVideo": {
+    "description": "Record or select video instruction"
+  },
+  "recognizedSign": "الإشارة المعترف بها (تسلسل)",
+  "@recognizedSign": {
+    "description": "Recognized sign label"
+  },
+  "confidence": "الثقة",
+  "@confidence": {
+    "description": "Confidence label"
+  },
+  "frames": "إطارات",
+  "@frames": {
+    "description": "Frames label"
+  },
+  "otherPossibilities": "احتمالات أخرى",
+  "@otherPossibilities": {
+    "description": "Other possibilities label"
+  },
+  "inferenceTime": "زمن الاستدلال",
+  "@inferenceTime": {
+    "description": "Inference time label"
+  },
+  "sequence": "تسلسل",
+  "@sequence": {
+    "description": "Sequence label"
+  },
+  "loadingModelOrAnalyzing": "جارٍ تحميل النموذج أو التحليل...",
+  "@loadingModelOrAnalyzing": {
+    "description": "Loading model or analyzing text"
+  },
+  "modelLoadError": "خطأ في تحميل النموذج",
+  "@modelLoadError": {
+    "description": "Error message for model loading failure"
+  },
+  "cameraError": "فشل تهيئة الكاميرا",
+  "@cameraError": {
+    "description": "Error message for camera initialization failure"
+  },
+  "recordingError": "خطأ في بدء التسجيل",
+  "@recordingError": {
+    "description": "Error message for starting recording failure"
+  },
+  "recordingStopError": "خطأ في إيقاف التسجيل",
+  "@recordingStopError": {
+    "description": "Error message for stopping recording failure"
+  },
+  "filePickError": "خطأ في اختيار الملف",
+  "@filePickError": {
+    "description": "Error message for file selection failure"
+  },
+  "videoLoadError": "خطأ في تحميل الفيديو",
+  "@videoLoadError": {
+    "description": "Error message for video loading failure"
+  },
+  "noVideoSelected": "لم يتم اختيار فيديو",
+  "@noVideoSelected": {
+    "description": "Error message for no video selected"
+  },
+  "analysisError": "فشل تحليل الفيديو",
+  "@analysisError": {
+    "description": "Error message for video analysis failure"
+  },
+  "retry": "إعادة المحاولة",
+  "@retry": {
+    "description": "Retry button text"
   }
 }

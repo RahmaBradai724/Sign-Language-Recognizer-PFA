@@ -67,8 +67,8 @@ abstract class AppLocalizations {
 
   final String localeName;
 
-  static AppLocalizations? of(BuildContext context) {
-    return Localizations.of<AppLocalizations>(context, AppLocalizations);
+  static AppLocalizations of(BuildContext context) {
+    return Localizations.of<AppLocalizations>(context, AppLocalizations)!;
   }
 
   static const LocalizationsDelegate<AppLocalizations> delegate =
@@ -251,7 +251,7 @@ abstract class AppLocalizations {
   /// Sign recognition title
   ///
   /// In fr, this message translates to:
-  /// **'Reconnaissance de Signes'**
+  /// **'Reconnaissance des Signes'**
   String get signRecognition;
 
   /// Activate camera button text
@@ -289,6 +289,186 @@ abstract class AppLocalizations {
   /// In fr, this message translates to:
   /// **'Français'**
   String get french;
+
+  /// Instructions for sign recognition
+  ///
+  /// In fr, this message translates to:
+  /// **'Instructions'**
+  String get instructions;
+
+  /// Best recognition tips title
+  ///
+  /// In fr, this message translates to:
+  /// **'Pour une meilleure reconnaissance :'**
+  String get bestRecognition;
+
+  /// Record video length instruction
+  ///
+  /// In fr, this message translates to:
+  /// **'Enregistrez des vidéos de 3 à 5 secondes'**
+  String get recordVideoLength;
+
+  /// Keep hands visible instruction
+  ///
+  /// In fr, this message translates to:
+  /// **'Gardez vos mains bien visibles'**
+  String get keepHandsVisible;
+
+  /// Uniform lighting instruction
+  ///
+  /// In fr, this message translates to:
+  /// **'Utilisez un éclairage uniforme et suffisant'**
+  String get uniformLighting;
+
+  /// Avoid sudden movements instruction
+  ///
+  /// In fr, this message translates to:
+  /// **'Évitez les mouvements brusques'**
+  String get avoidSuddenMovements;
+
+  /// Center sign instruction
+  ///
+  /// In fr, this message translates to:
+  /// **'Centrez le signe à l\'écran'**
+  String get centerSign;
+
+  /// Model analysis information
+  ///
+  /// In fr, this message translates to:
+  /// **'Le modèle analyse 16 images de votre vidéo pour comprendre le mouvement du signe.'**
+  String get modelAnalysisInfo;
+
+  /// Understood button text
+  ///
+  /// In fr, this message translates to:
+  /// **'Compris'**
+  String get understood;
+
+  /// Stop recording button text
+  ///
+  /// In fr, this message translates to:
+  /// **'Arrêter'**
+  String get stop;
+
+  /// Record button text
+  ///
+  /// In fr, this message translates to:
+  /// **'Enregistrer'**
+  String get record;
+
+  /// Select video button text
+  ///
+  /// In fr, this message translates to:
+  /// **'Sélectionner'**
+  String get select;
+
+  /// Analyze video button text
+  ///
+  /// In fr, this message translates to:
+  /// **'Analyser'**
+  String get analyze;
+
+  /// Record or select video instruction
+  ///
+  /// In fr, this message translates to:
+  /// **'Enregistrez une vidéo de 3 à 5 secondes ou sélectionnez un fichier vidéo'**
+  String get recordOrSelectVideo;
+
+  /// Recognized sign label
+  ///
+  /// In fr, this message translates to:
+  /// **'Signe reconnu (séquence)'**
+  String get recognizedSign;
+
+  /// Confidence label
+  ///
+  /// In fr, this message translates to:
+  /// **'Confiance'**
+  String get confidence;
+
+  /// Frames label
+  ///
+  /// In fr, this message translates to:
+  /// **'Images'**
+  String get frames;
+
+  /// Other possibilities label
+  ///
+  /// In fr, this message translates to:
+  /// **'Autres possibilités'**
+  String get otherPossibilities;
+
+  /// Inference time label
+  ///
+  /// In fr, this message translates to:
+  /// **'Temps d\'inférence'**
+  String get inferenceTime;
+
+  /// Sequence label
+  ///
+  /// In fr, this message translates to:
+  /// **'Séquence'**
+  String get sequence;
+
+  /// Loading model or analyzing text
+  ///
+  /// In fr, this message translates to:
+  /// **'Chargement du modèle ou analyse en cours...'**
+  String get loadingModelOrAnalyzing;
+
+  /// Error message for model loading failure
+  ///
+  /// In fr, this message translates to:
+  /// **'Erreur de chargement du modèle'**
+  String get modelLoadError;
+
+  /// Error message for camera initialization failure
+  ///
+  /// In fr, this message translates to:
+  /// **'Échec de l\'initialisation de la caméra'**
+  String get cameraError;
+
+  /// Error message for starting recording failure
+  ///
+  /// In fr, this message translates to:
+  /// **'Erreur au démarrage de l\'enregistrement'**
+  String get recordingError;
+
+  /// Error message for stopping recording failure
+  ///
+  /// In fr, this message translates to:
+  /// **'Erreur à l\'arrêt de l\'enregistrement'**
+  String get recordingStopError;
+
+  /// Error message for file selection failure
+  ///
+  /// In fr, this message translates to:
+  /// **'Erreur lors de la sélection du fichier'**
+  String get filePickError;
+
+  /// Error message for video loading failure
+  ///
+  /// In fr, this message translates to:
+  /// **'Erreur lors du chargement de la vidéo'**
+  String get videoLoadError;
+
+  /// Error message for no video selected
+  ///
+  /// In fr, this message translates to:
+  /// **'Aucune vidéo sélectionnée'**
+  String get noVideoSelected;
+
+  /// Error message for video analysis failure
+  ///
+  /// In fr, this message translates to:
+  /// **'Échec de l\'analyse de la vidéo'**
+  String get analysisError;
+
+  /// Retry button text
+  ///
+  /// In fr, this message translates to:
+  /// **'Réessayer'**
+  String get retry;
 }
 
 class _AppLocalizationsDelegate
